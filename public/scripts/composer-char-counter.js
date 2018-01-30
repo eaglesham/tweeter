@@ -3,6 +3,8 @@ $(document).ready(function() {
         let charAmount = $(this).val().length;
         let newCount = 140 - charAmount;
         $(this).parent().children( ".counter" ).html(newCount);
-        console.log($(this).next('.counter'))
+        if (newCount < 0) {
+            $(this).parent().children( ".counter" ).css("color", "Red");
+        }
       });
   });
