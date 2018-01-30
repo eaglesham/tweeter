@@ -5,6 +5,8 @@ $(document).ready(function() {
         $(this).parent().children( ".counter" ).html(newCount);
         if (newCount < 0) {
             $(this).parent().children( ".counter" ).css("color", "Red");
+        } else {
+            $(this).parent().children( ".counter" ).css("color", "Black")
         }
       });
   });
