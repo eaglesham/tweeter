@@ -28,32 +28,3 @@ main {
   background: white;
   padding-top: 140px;
 }
-
-.new-tweet h2 {
-  border-bottom: 2px solid #000000;
-  padding: 5px 10px;
-  display: inline-block;
-  margin: 15px 22px;
-  width: 90%;  
-}
-
-.new-tweet {
-  background-color: gainsboro;  
-  border-radius: 8px;
-}
-
-#textarea {
-  padding: 5px;
-  margin: 10px 0px 10px 22px;
-  width: 90%; 
-}
-
-button, html [type="button"], [type="reset"], [type="submit"] {
-  background-color: rgba(178, 209, 200, 0.74);
-  margin: 0px 10px 13px 22px;
-}
-
-.counter {
-  float: right;
-  padding-right: 25px;  
-}
