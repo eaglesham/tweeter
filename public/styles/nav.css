@@ -7,6 +7,7 @@
     color: #e8fdff;
     /*0px padding on top and bottom, 2em padding on right and left*/
     padding: 0em 2em;
+    z-index: 2;
 }
 
 #nav-bar .logo {
