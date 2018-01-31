@@ -28,27 +28,29 @@
     // console.log($tweet); // to see what it looks like
     // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc. 
     
-    var createTweetElement = (tweetObject) => {
-        var $tweet = $("<article>").addClass("tweet");
+    const createTweetElement = (tweetObject) => {
+        let $tweet = $("<article>").addClass("tweet");
         
-        var $header = $("<header>").addClass("tweet_header").appendTo($tweet);
-        var $bodyDiv = $("<div>").addClass("tweet_body").appendTo($tweet);
-        var $footer = $("<footer>").addClass("tweet_footer").appendTo($tweet)   ;
+        let $header = $("<header>").addClass("tweet_header").appendTo($tweet);
+        let $bodyDiv = $("<div>").addClass("tweet_body").appendTo($tweet);
+        let $footer = $("<footer>").addClass("tweet_footer").appendTo($tweet)   ;
         
-        var $name = $("<p class='tweet_name'>").text(tweetObject.user.name).appendTo($header);
-        var $avatar = $("<img class='tweet_avatar'>").attr('src', tweetObject.user.avatars.small).appendTo($header);
-        var $handle = $("<h4 class='tweet_id'>").text(tweetObject.user.handle).appendTo($header);
-        var $body = $("<p class='tweet_body'>").text(tweetObject.content.text).appendTo($bodyDiv);
+        let $name = $("<p class='tweet_name'>").text(tweetObject.user.name).appendTo($header);
+        let $avatar = $("<img class='tweet_avatar'>").attr('src', tweetObject.user.avatars.small).appendTo($header);
+        let $handle = $("<h4 class='tweet_id'>").text(tweetObject.user.handle).appendTo($header);
+        let $body = $("<p class='tweet_body'>").text(tweetObject.content.text).appendTo($bodyDiv);
         
         //formula for getting date tweet was created
-        var dateCreated = Date.now() - tweetObject.created_at;
-        var $postDate = $("<p class='posted_date'>").text(dateCreated).appendTo($footer);
+        let dateCreated = Date.now() - tweetObject.created_at;
+        let $postDate = $("<p class='posted_date'>").text(dateCreated).appendTo($footer);
         
         return $tweet;
     }
 
-    var $tweet = createTweetElement(tweetData);
-    console.log($tweet);
+    const $tweet = createTweetElement(tweetData);
+    
+
+     
 });
  
 
