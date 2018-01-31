@@ -21,7 +21,6 @@
 }
 
 .tweet_avatar {
-    position: relative;
     padding: 10px;
     border-radius: 18px;
 }
@@ -30,4 +29,19 @@
     position: relative;
     height: 200px;
     width: 100%;
+}
+
+.tweet_name {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    top: -30px;
+
+}
+
+.tweet_id {
+    float: right;
+    margin: 10px 5px;
+    color: rgba(0, 0, 0, 0.281)
+
 }
