@@ -21,7 +21,7 @@
         "content": {
             "text": "If I have seen further it is by standing on the shoulders of giants"
         },
-        "created_at": 1461116232227
+        "created_at": 11116232227
         },
         {
         "user": {
@@ -35,7 +35,7 @@
         "content": {
             "text": "Je pense , donc je suis"
         },
-        "created_at": 1461113959088
+        "created_at": 116117959088
         },
         {
         "user": {
@@ -76,10 +76,28 @@
         let $handle = $("<h4 class='tweet_id'>").text(tweetObject.user.handle).appendTo($header);
         let $body = $("<p class='tweet_text'>").text(tweetObject.content.text).appendTo($bodyDiv);
         
-        //formula for getting date tweet was created
-        let dateMilliseconds = Date.now() - tweetObject.created_at / ;
-        let $postDate = $("<p class='posted_date'>").text(dateCreated).appendTo($footer);
-        
+        //all this code is for appending specific age of tweet with appropriate text beside it
+        //converting time in milliseconds to days
+        let timeSinceTweet = ((Date.now() - tweetObject.created_at) / (1000 * 60 * 60 * 24));
+        let hours = false;
+        //if days < 1, multiplying by 24 to get amount of hours ago
+        if(timeSinceTweet < 1) {
+            timeSinceTweet *= 24;
+            hours = true;
+        }
+    
+        if(hours) {
+            //if hours is less than 1
+            if(timeSinceTweet < 1) {
+                let mins = Math.floor(timeSinceTweet * 60);
+                $footer.append(`<p class='posted_date'>${mins} minutes ago`);
+            } else {
+                $footer.append(`<p class='posted_date'>${Math.floor(timeSinceTweet)} hours ago`);
+            }
+        //if not in hours (still days) than print [x] days old 
+        } else {
+            $footer.append(`<p class='posted_date'>${Math.floor(timeSinceTweet)} days ago`);
+        }
         return $tweet;
     }    
     
