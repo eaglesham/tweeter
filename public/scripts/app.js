@@ -5,8 +5,7 @@
  */
 
  $(document).ready(() => {
- 
-  
+     
     const renderTweets = (tweets) => {
         // loops through tweets
         for (let tweet of tweets) {
@@ -16,6 +15,10 @@
         // calls createTweetElement for each tweet
         // takes return value and appends it to the tweets container
     } 
+
+    $.get("/tweets", function (data) {
+        renderTweets(data);
+    });
   
     const createTweetElement = (tweetObject) => {
         let $tweet = $("<article>").addClass("tweet");
