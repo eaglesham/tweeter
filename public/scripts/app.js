@@ -47,7 +47,7 @@
             } else {
                 $footer.append(`<p class='posted_date'>${Math.floor(timeSinceTweet)} hours ago`);
             }
-        //if not in hours (still days) than print [x] days old 
+        //if not in hours (still days) then print [x] days old 
         } else {
             $footer.append(`<p class='posted_date'>${Math.floor(timeSinceTweet)} days ago`);
         }
