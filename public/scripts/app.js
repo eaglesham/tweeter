@@ -11,7 +11,7 @@
         // loops through tweets
         for (let tweet of tweets) {
             //console.log(createTweetElement(tweet))
-            $( "#allTweets" ).append(createTweetElement(tweet));
+            $( "#allTweets" ).prepend(createTweetElement(tweet));
         }  
         // calls createTweetElement for each tweet
         // takes return value and appends it to the tweets container
@@ -90,7 +90,7 @@
                     }
                 });
             }   
-        });       
+        }); 
     });
 
     
