@@ -54,17 +54,31 @@
         return $tweet;
     }    
     
-    //ajax function for add tweet to database then getting tweet and appending container on homepage
-    let $button = $('#tweet_button');
+    const $button = $('#tweet_button');
     
-    $button.on('click', function () {
+    
+    $button.on('click', function () {        
         event.preventDefault();
+        //check if form submitted is empty--return an error, if too many characters--return a different error        
+        let $tweetBody = $('#textarea').val();
+        if ($tweetBody.length === 0) {
+            console.log($tweetBody)
+            alert("Text input can NOT be empty!");
+            return; 
+        } 
+        if ($tweetBody.length > 140) {
+            alert("Yo, tweet too long! No one wants to read that much from you.");
+            return;
+        }
+            
+        //ajax function for add tweet to database then getting tweet and appending container on homepage
         let formData = $("#textarea");
         $.ajax({
             url: '/tweets',
             method: 'POST',
             data: formData.serialize(),
             success: function () {
+                //empties all children of allTweets element so that they don't get doubled up on the webpage
                 $("#allTweets").empty();
                 //get request, done by ajax, is put into success: of ajax post request. this way they happen synchronously
                 $.ajax({
@@ -76,8 +90,11 @@
                     }
                 });
             }   
-        });
-        
+        });       
     });
+
+    
+
+
 
 });
