@@ -54,9 +54,9 @@
         return $tweet;
     }    
     
+   
     const $button = $('#tweet_button');
-    
-    
+      
     $button.on('click', function () {        
         event.preventDefault();
         //check if form submitted is empty--return an error, if too many characters--return a different error        
@@ -94,6 +94,12 @@
     });
 
     
+    const $composeButton = $("#composeButton");
+
+    $composeButton.on('click', function () {
+        $(".new-tweet").slideToggle()
+        $("#textarea").focus();$(this).select();
+    })
 
 
 

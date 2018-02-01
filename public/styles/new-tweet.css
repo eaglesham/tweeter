@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .new-tweet h2 {
     border-bottom: 2px solid #000000;
     padding: 5px 10px;
