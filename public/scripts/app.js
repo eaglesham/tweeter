@@ -31,6 +31,7 @@
         let $avatar = $("<img class='tweet_avatar'>").attr('src', tweetObject.user.avatars.small).appendTo($header);
         let $handle = $("<h4 class='tweet_id'>").text(tweetObject.user.handle).appendTo($header);
         let $body = $("<p class='tweet_text'>").text(tweetObject.content.text).appendTo($bodyDiv);
+        let $icons = $("<div class='footer_icons'><i class='fa fa-flag'></i><i class='fa fa-retweet'></i><i class='fa fa-heart'></i></div>").appendTo($footer);
         
         //all this code is for appending specific age of tweet with appropriate text beside it
         //converting time in milliseconds to days

@@ -22,6 +22,7 @@
 .tweet_avatar {
     padding: 10px;
     border-radius: 18px;
+    float: left;
 }
 
 .tweet_body {
@@ -32,9 +33,7 @@
 
 .tweet_name {
     display: inline-block;
-    margin: 0px;
-    position: relative;
-    top: -30px;
+    margin-top: 5px;
     font-size: xx-large;
     font-weight: 900;
     color: rgba(39, 38, 38, 0.644)
