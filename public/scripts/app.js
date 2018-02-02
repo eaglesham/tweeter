@@ -27,7 +27,7 @@
         
         let $header = $("<header>").addClass("tweet_header").appendTo($tweet);
         let $bodyDiv = $("<div>").addClass("tweet_body").appendTo($tweet);
-        let $footer = $("<footer>").addClass("tweet_footer").appendTo($tweet)   ;
+        let $footer = $("<footer>").addClass("tweet_footer").appendTo($tweet);
         
         let $name = $("<p class='tweet_name'>").text(tweetObject.user.name).appendTo($header);
         let $avatar = $("<img class='tweet_avatar'>").attr('src', tweetObject.user.avatars.small).appendTo($header);
@@ -69,7 +69,6 @@
         //check if form submitted is empty--return an error, if too many characters--return a different error        
         let $tweetBody = $('#textarea').val();
         if ($tweetBody.length === 0) {
-            console.log($tweetBody)
             alert("Text input can NOT be empty!");
             return; 
         } 
@@ -108,9 +107,9 @@
     const $composeButton = $("#composeButton");
     //compose button in header toggles tweet composition box to slide down or slide up
     $composeButton.on('click', function () {
-        $(".new-tweet").slideToggle()
+        $(".new-tweet").slideToggle();
         $("#textarea").focus();$(this).select();
-    })
+    });
 
 
 
