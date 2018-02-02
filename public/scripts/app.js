@@ -18,6 +18,7 @@
 
     $.get("/tweets", function (data) {
         renderTweets(data);
+        $("textarea").val("");
     });
   
     const createTweetElement = (tweetObject) => {
@@ -61,7 +62,7 @@
    
     const $button = $('#tweet_button');
       
-    $button.on('click', function () {        
+    $button.on('click', function (event) {        
         event.preventDefault();
         //check if form submitted is empty--return an error, if too many characters--return a different error        
         let $tweetBody = $('#textarea').val();
@@ -95,6 +96,7 @@
                 });
             }   
         }); 
+        $("textarea").val("");
     });
 
     
