@@ -15,12 +15,13 @@
         // calls createTweetElement for each tweet
         // takes return value and appends it to the tweets container
     } 
-
+    //render existing list of tweets and clear text input area of compose box on every page load
     $.get("/tweets", function (data) {
         renderTweets(data);
         $("textarea").val("");
     });
-  
+    
+    //function takes data of newly posted tweet, as an object, and creates HTML <article> element in <section> below compose box.
     const createTweetElement = (tweetObject) => {
         let $tweet = $("<article>").addClass("tweet");
         
