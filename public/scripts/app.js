@@ -61,7 +61,8 @@
     
    
     const $button = $('#tweet_button');
-      
+     
+    //functions executed upon clicking 'tweet' button on 'compose' box
     $button.on('click', function (event) {        
         event.preventDefault();
         //check if form submitted is empty--return an error, if too many characters--return a different error        
@@ -96,12 +97,15 @@
                 });
             }   
         }); 
+        //clear text area after posting tweet
         $("textarea").val("");
+        //reset character counter after tweet
+        $(".counter").text(140);
     });
 
     
     const $composeButton = $("#composeButton");
-
+    //compose button in header toggles tweet composition box to slide down or slide up
     $composeButton.on('click', function () {
         $(".new-tweet").slideToggle()
         $("#textarea").focus();$(this).select();

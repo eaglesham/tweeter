@@ -48,7 +48,8 @@
 
 .tweet_text {
     text-align: left;
-    padding: 0.5em;     
+    padding: 0.5em;
+    word-wrap: break-word;     
 }
 
 .posted_date {

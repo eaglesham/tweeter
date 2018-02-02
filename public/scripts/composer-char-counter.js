@@ -1,3 +1,4 @@
+//character counter starts at 140, is subtracted by 1 after every 'keyup'. All numbers below 0 (over 140 characters entered) are displayed in red
 $(document).ready(function() {
     $( "#textarea" ).keyup(function(ev) {
         let charAmount = $(this).val().length;
