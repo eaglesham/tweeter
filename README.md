@@ -19,3 +19,8 @@ Tweeter is a simple, single-page Twitter clone.
 - md5 2.1.0
 - mongodb 2.2.34
 
+## Screenshots
+
+![screenshot of top of homepage, with compose box open](https://raw.githubusercontent.com/eaglesham/tweeter/master/docs/Tweeter_homepage_compose.png)
+
+![screenshot of tweets thread](https://raw.githubusercontent.com/eaglesham/tweeter/master/docs/Tweeter_tweets_scroll.png)
