@@ -73,8 +73,19 @@
 .footer_icons {
     float: right;
     visibility: hidden;
+    padding: 7px;
 }
 
 .tweet:hover .footer_icons {
     visibility: visible;
+}
+
+.fa-flag {
+    padding: 3px;
+}
+.fa-retweet {
+    padding: 3px;
+}
+.fa-heart {
+    padding: 3px;
 }
